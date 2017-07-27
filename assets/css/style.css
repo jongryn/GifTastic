@@ -7,92 +7,47 @@
 
 body {
   font-family: arial, 'Share Tech Mono', monospace;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  margin-top: 75px;
-  margin-bottom: 75px;
-  background: url("https://github.com/jongryn/GifTastic/blob/master/assets/images/star-wars-wallpaper-10.jpg?raw=true"); no-repeat center center fixed;
+  background: url("https://github.com/jongryn/GifTastic/blob/master/assets/images/19104.jpg?raw=true"); no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.container {
-	width: ;
-}
 h1 {
   font-family: arial, 'Share Tech Mono', monospace;
-  font-size: 55px;
+  color: white;
+  font-size: 45px;
+}
+.text-center {
   color: white;
 }
-h3 {
+.ratings {
+  color: yellow;
   font-family: arial, 'Share Tech Mono', monospace;
-  font-size: 15px;
+  font-size: 18px;
+}
+.btn-primary {
+  margin-left: 10px;
+  background: yellow;
+  color: blue;
+}
+@media screen and (max-width: 480px) {
+  .movImage {
+  	width: 500px;
+  	height: 500px;
+  }
+  body {
+  	background-color: red;
+  }
+}
+.form-control {
+  width: 30%;
+}
+#add {
+  font-size: 20px;
   color: white;
 }
-form {
-  color: white;
+#.btn-success{
+  background-color: red;
+  border-color: red;
 }
-#buttonsView {
-  display: inline;
-}
-.gifs {
-  display: inline;
-}
-#gifsView {
-  display: inline;
-  margin-bottom: 40px;
-}
-.gif {
-  cursor: crosshair;
-}
-img.squiggle {
-  top: 0;
-  left: 0;
-}
-#show-form {
-  display: inline;
-}
-button {
-  background: #fff;
-  margin: 5px;
-  font-family: arial, 'Share Tech Mono', monospace;
-  color: black;
-}
-textarea:focus {
-  border-bottom: 2px solid #fff;
-  -webkit-box-shadow: 0 2px 0 0 #fff;
-  -moz-box-shadow: 0 2px 0 0 #fff;
-  box-shadow: 0 2px 0 0 #fff;
-}
-.waves-effect {
-	top: 15px;
-}
-
-/* border */
-#top,
-#bottom,
-#left,
-#right {
-  background: #fff;
-  position: fixed;
-}
-
-#left,
-#right {
-  top: 0; bottom: 0;
-  width: 15px;
-}
-
-  #left { left: 0; }
-  #right { right: 0; }
-
-#top,
-#bottom {
-  left: 0; right: 0;
-  height: 15px;
-} 
-
-#top { top: 0; }
-#bottom { bottom: 0; }
