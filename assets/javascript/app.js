@@ -4,24 +4,24 @@
 // Revisions: Jon (7/23/17) - Added JS
 */
 
-var athletesArray = ["Kobe Bryant", "Michael Jordan", "Larry Bird", "Steve Young", "Troy Aikman"];
+var charactersArray = ["Luke Skywalker", "Obi Wan Kenobi", "Princess Laya", "Han Solo", "R2D2"];
 
 $(document).ready(function() {
-  for (var i = 0; i < athletesArray.length; i++) {
-  	$("#althete-buttons").append("<button type='button' onclick='searchGif(\"" + athletesArray[i] + "\")' class='btn btn-primary' value=' " + athletesArray[i] + "'> " + athletesArray[i] + " </button>");
+  for (var i = 0; i < charactersArray.length; i++) {
+  	$("#character-buttons").append("<button type='button' onclick='searchGif(\"" + charactersArray[i] + "\")' class='btn btn-primary' value=' " + charactersArray[i] + "'> " + charactersArray[i] + " </button>");
   }
 });
 
-function athleteButtonClicked() {
-  var userInput = $('#athlete-input').val();
+function characterButtonClicked() {
+  var userInput = $('#character-input').val();
   searchGif(userInput);
 }
 
 function submitButtonClicked() {
-  var userInput = $('#athlete-input').val();
+  var userInput = $('#character-input').val();
 
   if(userInput) {
-  	$('#athlete-buttons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput +"'> " + userInput + " </button>");
+  	$('#character-buttons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput +"'> " + userInput + " </button>");
   }
 }
 
@@ -36,13 +36,13 @@ function searchGif(gifName) {
 }
 
 function displayGif(response) {
-  $('#athletes').empty();
+  $('#characters').empty();
   for (var i = 0; i < response.data.length; i++) {
   	var rating = "<div class='ratings'> Rating: " + (response.data[i].rating) + " </div>";
   	var image = rating + '<img src= " ' + response.data[i].images.fixed_height_still.url + '"data-still=" ' + response.data[i].images.fixed_height_still.url + ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="movImage" style= "width:250px; height: 250px">';
 
   	image = '<div class="col-md-4">' + image + "</div>";
-  	$('#athletes').append(image);
+  	$('#characters').append(image);
 
   }
 
