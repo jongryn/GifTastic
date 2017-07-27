@@ -16,7 +16,7 @@ function makeButtons(){
   // loops through the charactres array
   for (var i = 0; i < characters.length; i++){
 
-  	// dynamically makes buttons for every shwo in the array
+  	// dynamically makes buttons for every show in the array
   	var a = $('<button>')
   	a.addClass('character'); // add a class
   	a.attr('data-name', characters[i]); // add a data-attribute
